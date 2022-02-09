@@ -1,3 +1,4 @@
+//Parent class Square
 package inheritance;
 
 public class Square {

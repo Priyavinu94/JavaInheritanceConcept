@@ -1,3 +1,4 @@
+// Cube extends Square
 package inheritance;
 
 public class Cube extends Square {

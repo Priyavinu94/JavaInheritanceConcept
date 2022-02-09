@@ -1,3 +1,4 @@
+//SquarePrism Extends Square
 package inheritance;
 
 public class SquarePrism extends Square {

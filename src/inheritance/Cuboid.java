@@ -1,3 +1,4 @@
+// Cuboid extends Square Prism
 package inheritance;
 
 public class Cuboid extends SquarePrism {
