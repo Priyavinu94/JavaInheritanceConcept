@@ -1,4 +1,4 @@
-// Assuming ATMCard does the functions : Checking account balance and withdraw amount only.
+// Assuming ATMCard does the functions : Checking account balance and withdraw amount only
 
 package inheritanceAssignment;
 

@@ -1,4 +1,4 @@
-//CreditCard class variables : creditLimit, minimum due, and credit card balance.
+//CreditCard class variables : creditLimit, minimum due, and credit card balance
 
 package inheritanceAssignment;
 

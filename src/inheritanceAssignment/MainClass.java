@@ -1,4 +1,4 @@
-// Program for the application dealing with Cards
+// Program for the application dealing with Cards.
 // Assuming ATMCard as parent class. Both CreditCard & DebitCard class extends ATMCard class
 
 package inheritanceAssignment;

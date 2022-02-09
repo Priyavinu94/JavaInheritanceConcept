@@ -1,4 +1,4 @@
-//DebitCard class declares an additional variable overdraftLimit, allowing the user to perform a purchase within a limit even when the accounts runs negative balance.
+//DebitCard class declares an additional variable overdraftLimit -  allowing the user to perform a purchase within a limit even when the accounts runs negative balance.
 
 package inheritanceAssignment;
 
