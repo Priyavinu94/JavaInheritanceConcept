@@ -1,5 +1,7 @@
-// Program for the application dealing with Cards.
-// Assuming ATMCard as parent class. Both CreditCard & DebitCard class extends ATMCard class
+/* Program for the application dealing with Cards.
+ * Assuming ATMCard as parent class. Both CreditCard & DebitCard class extends ATMCard class
+ * Assuming all 3 cards of a person are linked with the same Bank/financial service provider.
+ */
 
 package inheritanceAssignment;
 
