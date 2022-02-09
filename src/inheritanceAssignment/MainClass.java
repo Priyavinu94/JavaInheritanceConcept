@@ -41,7 +41,7 @@ public class MainClass {
 						credit.viewInfo();
 						break;
 					case 2:
-						System.out.println("Enter the amount to be purchased");
+						System.out.println("Enter the purchase amount");
 						double purchaseFor = sc.nextDouble();
 						credit.purchase(purchaseFor);
 						break;
@@ -86,7 +86,7 @@ public class MainClass {
 						debit.depositMoney(amountToDeposit);
 						break;
 					case 4:
-						System.out.println("Enter the amount to be purchased");
+						System.out.println("Enter the purchase amount");
 						double purchaseFor = sc.nextDouble();
 						debit.purchase(purchaseFor);
 						break;
