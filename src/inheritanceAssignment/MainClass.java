@@ -1,6 +1,5 @@
 /* Program for the application dealing with Cards.
  * Assuming ATMCard as parent class. Both CreditCard & DebitCard class extends ATMCard class
- * Assuming all 3 cards of a person are linked with the same Bank/financial service provider.
  */
 
 package inheritanceAssignment;
@@ -13,14 +12,13 @@ public class MainClass {
 
 		Scanner sc = new Scanner(System.in);
 
-		CreditCard credit = new CreditCard("Priya", "4506987965469052", 4123, 3000, 20);
-		DebitCard debit = new DebitCard("Priya", "4500398080923256", 4156, 150);
-		ATMCard atm = new ATMCard("Priya", "3224390493242342", 4569);
-
+		CreditCard credit = new CreditCard("Priya", "4506987965469052", 4123);
+		DebitCard debit = new DebitCard("Priya", "4500398080923256", 4156);
+		
 		do {
 			System.out.println("Welcome!!! Please select the card service.");
 			System.out.println("Enter the number corresponding to each option to make selection");
-			System.out.println(" 1.Credit\n 2.Debit\n 3.ATM \n 4.Exit");
+			System.out.println(" 1.Credit\n 2.Debit\n 3.Exit");
 
 			String selection = sc.next();
 
@@ -28,9 +26,11 @@ public class MainClass {
 
 			case "1": // credit card functions:
 
-				System.out.println("Please enter your card No & 4 digit PIN. OR  Insert your card");
+				System.out.println("Enter your card No");
 				credit.setInputCardNum(sc.next());
+				System.out.println("Enter your 4 digit PIN");
 				credit.setInputPinNum(sc.nextInt());
+				
 				if (credit.isCardValid(credit.getInputCardNum(), credit.getInputPinNum())) {
 					System.out.println("Hi " + credit.name);
 					System.out.println("Please make a selection : \n 1. View card information");
@@ -46,7 +46,7 @@ public class MainClass {
 						credit.purchase(purchaseFor);
 						break;
 					case 3:
-						System.out.println("Enter the amount you wish to pay");
+						System.out.println("Enter the amount you want to pay");
 						double payToCard = sc.nextDouble();
 						credit.makeBillpayment(payToCard);
 						break;
@@ -62,8 +62,9 @@ public class MainClass {
 
 			case "2": // debit card functions
 
-				System.out.println("Please enter your card No & 4 digit PIN. OR  Insert your card");
+				System.out.println("Enter your card No");
 				debit.setInputCardNum(sc.next());
+				System.out.println("Enter your 4 digit PIN");
 				debit.setInputPinNum(sc.nextInt());
 				if (debit.isCardValid(debit.getInputCardNum(), debit.getInputPinNum())) {
 					System.out.println("Hi " + debit.name);
@@ -100,36 +101,7 @@ public class MainClass {
 				}
 				break;
 
-			case "3": // atm card functions:
-
-				System.out.println("Please enter your card No & 4 digit PIN. OR  Insert your card");
-				atm.setInputCardNum(sc.next());
-				atm.setInputPinNum(sc.nextInt());
-				if (atm.isCardValid(atm.getInputCardNum(), atm.getInputPinNum())) {
-					System.out.println("Hi " + credit.name);
-					System.out.println(
-							"Please make a selection : \n 1. Check Balance\n 2. Withdraw money\n 3. Main Menu");
-					int option = sc.nextInt();
-					switch (option) {
-					case 1:
-						atm.showBalance(atm.getInputCardNum(), atm.getInputPinNum());
-						break;
-					case 2:
-						System.out.println("Enter the amount to be withdrawn");
-						double amountToWithdraw = sc.nextDouble();
-						atm.withdraw(amountToWithdraw);
-						break;
-					case 3:
-						break;
-					default:
-						System.out.println("Invalid selection.");
-					}
-				} else {
-					System.out.println("Invalid Card or Pin No.");
-				}
-				break;
-
-			case "4": // exit option
+			case "3": // exit option
 
 				System.out.println("You've opted to exit");
 				break;
@@ -139,8 +111,10 @@ public class MainClass {
 				System.out.println("Invalid Entry. Please make a valid selection.");
 			}
 			// after each case scenario completed, asks for exit or continue.
-			System.out.println("Press 'Y' to go back to Main Menu.\nPress 'N' to confirm Exit");
+			System.out.println("Press 'Y' to go back to Main Menu  OR  Press any key to confirm Exit");
 
 		} while (sc.next().equals("Y"));	// process repeats or stops as per user input
+		
+		sc.close();
 	}
 }

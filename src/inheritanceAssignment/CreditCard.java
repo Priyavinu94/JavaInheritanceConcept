@@ -6,14 +6,15 @@ public class CreditCard extends ATMCard {
 
 	private int creditLimit;
 	private int minimumDue;
-	private int creditCardBalance;
+	private double creditCardBalance; 
 
-	public CreditCard(String name, String cardNumber, int pinNumber, int creditLimit, int minimumDue) {
+	public CreditCard(String name, String cardNumber, int pinNumber) {
 		this.name = name;
 		this.cardNumber = cardNumber;
 		this.pinNumber = pinNumber;
-		this.creditLimit = creditLimit;
-		this.minimumDue = minimumDue;
+		this.creditLimit = 3000;
+		this.minimumDue = 20;
+		this.creditCardBalance = 235.33;
 	}
 
 	public double getCreditLimit() {

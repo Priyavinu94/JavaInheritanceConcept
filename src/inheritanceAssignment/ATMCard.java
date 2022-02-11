@@ -1,4 +1,5 @@
 // Assuming ATMCard does the functions : Checking account balance and withdraw amount only
+// assume - no user fees
 
 package inheritanceAssignment;
 
@@ -13,13 +14,7 @@ public class ATMCard {
 	private int inputPinNum;
 
 	public ATMCard() {
-
-	}
-
-	public ATMCard(String name, String cardNumber, int pinNumber) {
-		this.name = name;
-		this.cardNumber = cardNumber;
-		this.pinNumber = pinNumber;
+		// no-arg constructor
 	}
 
 	public String getInputCardNum() {
@@ -27,7 +22,7 @@ public class ATMCard {
 	}
 
 	public void setInputCardNum(String inputCardNum) {
-		if (!inputCardNum.equals("0")) {
+		if (inputCardNum.length() == 16) {
 			this.inputCardNum = inputCardNum;
 		}
 	}
@@ -39,7 +34,7 @@ public class ATMCard {
 	public void setInputPinNum(int inputPinNum) {
 		if (inputPinNum > 0 || inputPinNum < 9999) {
 			this.inputPinNum = inputPinNum;
-		} 
+		}
 	}
 
 	public double getBalance() {

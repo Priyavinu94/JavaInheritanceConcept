@@ -6,11 +6,12 @@ public class DebitCard extends ATMCard {
 
 	private int overdraftLimit;
 
-	DebitCard(String name, String cardNumber, int pinNumber, int overdraftLimit) {
+	DebitCard(String name, String cardNumber, int pinNumber) {
 		this.name = name;
 		this.cardNumber = cardNumber;
 		this.pinNumber = pinNumber;
-		this.overdraftLimit = overdraftLimit;
+		this.overdraftLimit = 150;
+		this.balance = 4293.84;
 	}
 
 	public int getOverdraftLimit() {
@@ -40,6 +41,8 @@ public class DebitCard extends ATMCard {
 	public double depositMoney(double depAmount) {
 		if (depAmount > 0) {
 			balance += depAmount;
+			System.out.println("Transaction is successfully completed");
+			System.out.println("Your current balance : " + balance);
 		} else {
 			System.out.println("The deposit amount is not valid");
 		}
