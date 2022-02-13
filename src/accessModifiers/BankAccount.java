@@ -23,7 +23,7 @@ public class BankAccount {
 	}
 
 	public void setLogin(String loginID) {
-		if (loginID.length() < 8) {
+		if (loginID.length() > 8) {
 			this.loginID = loginID;
 		}
 	}

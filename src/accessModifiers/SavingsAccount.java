@@ -4,7 +4,8 @@ public class SavingsAccount extends BankAccount {
 
 	public double interestRate;
 
-	public SavingsAccount(String name, double interestRate) {
+	public SavingsAccount(String accountName, double interestRate) {
+		this.accountName = accountName;
 		this.interestRate = interestRate;
 		this.balance = 686.89;
 	}
